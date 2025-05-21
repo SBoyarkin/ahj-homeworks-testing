@@ -5,4 +5,4 @@
 
 ![GitHubActions](https://github.com/SBoyarkin/ahj-homeworks-testing/actions/workflows/web.yml/badge.svg)
 
-![GitHub pages](https://sboyarkin.github.io/ahj-homeworks-testing/)
+[GitHub pages](https://sboyarkin.github.io/ahj-homeworks-testing/)

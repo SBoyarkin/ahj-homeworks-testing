@@ -1,9 +1,12 @@
 export class Widget {
-  constructor(card) {
+  constructor(card, pymentList) {
     this.card = card;
+
   }
-  appendVidget() {
+  appendVidget(pymentList) {
     const widget = document.createElement("div");
+    console.log(pymentList)
+    this.pymentList.forEach((el) => console.log(el));
     const btn = document.createElement("button");
     btn.textContent = "Проверить";
     btn.classList.add("btn");
@@ -53,17 +56,14 @@ export class Widget {
   getCardType(cardNumber) {
     const cleanNumber = cardNumber.replace(/\D/g, "");
 
-    // Visa: начинается на 4, длина 13, 16 или 19
     if (/^4/.test(cleanNumber)) {
       return "visa";
     }
 
-    // Mastercard: начинается на 51-55 или 2221-2720, длина 16
     if (/^5[1-5]/.test(cleanNumber) || /^2[2-7]/.test(cleanNumber)) {
       return "mastercard";
     }
 
-    // Мир: начинается на 2200-2204, длина 16
     if (/^220[0-4]/.test(cleanNumber)) {
       return "mir";
     }

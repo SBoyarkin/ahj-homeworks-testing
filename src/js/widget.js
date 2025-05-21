@@ -6,7 +6,7 @@ export class Widget {
   appendVidget(pymentList) {
     const widget = document.createElement("div");
     console.log(pymentList)
-    this.pymentList.forEach((el) => console.log(el));
+    pymentList.forEach((el) => console.log(el));
     const btn = document.createElement("button");
     btn.textContent = "Проверить";
     btn.classList.add("btn");

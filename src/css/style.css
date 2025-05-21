@@ -1,3 +1,33 @@
-body {
-    color: #999;
+.payment-system {
+  display: inline-block;
+  width: 60px;
+  min-height: 25px;
+  height: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
 }
+
+.mir {
+  background-image: url("../../src/img/pay/mir.png");
+}
+
+.visa {
+  background-image: url("../../src/img/pay/visa.png");
+}
+
+.mastercard {
+  background-image: url("../../src/img/pay/mastercard.png");
+}
+
+
+
+.btn {
+  color: green;
+}
+
+.gray {
+  filter: grayscale();
+}
+

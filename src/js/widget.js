@@ -1,12 +1,16 @@
 export class Widget {
-  constructor(card, pymentList) {
+  constructor(card) {
     this.card = card;
-
   }
-  appendVidget(pymentList) {
+  appendVidget(paymentList) {
     const widget = document.createElement("div");
-    console.log(pymentList)
-    pymentList.forEach((el) => console.log(el));
+    console.log(paymentList);
+    paymentList.forEach((el) => {
+      console.log(el);
+      const paymentBadge = document.createElement("span");
+      paymentBadge.classList.add("payment-system", "gray", `${el}`);
+      widget.append(paymentBadge);
+    });
     const btn = document.createElement("button");
     btn.textContent = "Проверить";
     btn.classList.add("btn");

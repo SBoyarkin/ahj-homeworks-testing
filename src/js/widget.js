@@ -21,6 +21,7 @@ export class Widget {
     btn.addEventListener("click", (event) => {
       event.preventDefault();
       const result = this.validateCard(inp.value);
+      console.log(result);
       const pays = document.querySelector(`.${result.type}`);
       if (pays !== null) {
         const qspay = document.querySelectorAll(".payment-system");
@@ -39,6 +40,7 @@ export class Widget {
 
   isValidCardNumber(cardNumber) {
     const cleanNumber = cardNumber.replace(/\D/g, "");
+    console.log(cleanNumber);
     if (cleanNumber.length < 13 || cleanNumber.length > 19) {
       return false;
     }
@@ -64,12 +66,11 @@ export class Widget {
       return "visa";
     }
 
-    if (/^5[1-5]/.test(cleanNumber) || /^2[2-7]/.test(cleanNumber)) {
-      return "mastercard";
-    }
-
     if (/^220[0-4]/.test(cleanNumber)) {
       return "mir";
+    }
+    if (/^5[1-5]/.test(cleanNumber) || /^2[2-7]/.test(cleanNumber)) {
+      return "mastercard";
     }
 
     return "unknown";

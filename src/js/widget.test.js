@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { Widget } from "./widget";
 
 describe("Test UI", () => {

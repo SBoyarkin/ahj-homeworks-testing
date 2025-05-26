@@ -7,7 +7,6 @@ describe("Test UI", () => {
   let widget;
 
   beforeEach(() => {
-    // Создаем контейнер для тестов
     document.body.innerHTML = '<div id="container"></div>';
     widget = new Widget();
   });
@@ -16,18 +15,14 @@ describe("Test UI", () => {
     const paymentList = ["visa", "mastercard", "mir"];
     const widgetElement = widget.appendVidget(paymentList);
     document.getElementById("container").appendChild(widgetElement);
-
     const input = document.querySelector("input");
     const button = document.querySelector("button");
-
-    // Симулируем ввод валидного номера Visa
     input.value = "4111 1111 1111 1111";
 
-    // Создаём и триггерим событие click
     const clickEvent = new Event("click", { bubbles: true });
     button.dispatchEvent(clickEvent);
 
-    // Проверяем классы
+
     const visaBadge = document.querySelector(".payment-system.visa");
     const mastercardBadge = document.querySelector(
       ".payment-system.mastercard",

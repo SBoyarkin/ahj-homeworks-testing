@@ -4,9 +4,7 @@ export class Widget {
   }
   appendVidget(paymentList) {
     const widget = document.createElement("div");
-    console.log(paymentList);
     paymentList.forEach((el) => {
-      console.log(el);
       const paymentBadge = document.createElement("span");
       paymentBadge.classList.add("payment-system", "gray", `${el}`);
       widget.append(paymentBadge);
@@ -21,7 +19,6 @@ export class Widget {
     btn.addEventListener("click", (event) => {
       event.preventDefault();
       const result = this.validateCard(inp.value);
-      console.log(result);
       const pays = document.querySelector(`.${result.type}`);
       if (pays !== null) {
         const qspay = document.querySelectorAll(".payment-system");
@@ -40,7 +37,6 @@ export class Widget {
 
   isValidCardNumber(cardNumber) {
     const cleanNumber = cardNumber.replace(/\D/g, "");
-    console.log(cleanNumber);
     if (cleanNumber.length < 13 || cleanNumber.length > 19) {
       return false;
     }

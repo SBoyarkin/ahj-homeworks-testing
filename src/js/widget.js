@@ -22,7 +22,7 @@ export class Widget {
       const pays = document.querySelector(`.${result.type}`);
       if (pays !== null) {
         const qspay = document.querySelectorAll(".payment-system");
-        qspay.forEach((value, key, parent) => {
+        qspay.forEach((value) => {
           if (value.classList.length < 3) {
             value.classList.add("gray");
           }

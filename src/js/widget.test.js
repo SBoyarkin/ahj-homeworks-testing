@@ -19,7 +19,6 @@ describe("Test UI", () => {
     const clickEvent = new Event("click", { bubbles: true });
     button.dispatchEvent(clickEvent);
 
-
     const visaBadge = document.querySelector(".payment-system.visa");
     const mastercardBadge = document.querySelector(
       ".payment-system.mastercard",
